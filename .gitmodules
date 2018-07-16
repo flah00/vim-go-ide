@@ -1,0 +1,9 @@
+[submodule "bundle/forked/vim-jenkinsfile"]
+	path = bundle/forked/vim-jenkinsfile
+	url = https://github.com/martinda/Jenkinsfile-vim-syntax.git
+[submodule "bundle/forked/vim-solarized8"]
+	path = bundle/forked/vim-solarized8
+	url = https://github.com/lifepillar/vim-solarized8.git
+[submodule "bundle/forked/vim-mustache-handlebars"]
+	path = bundle/forked/vim-mustache-handlebars
+	url = git://github.com/mustache/vim-mustache-handlebars.git
