@@ -1,4 +1,3 @@
-colorscheme solarized8
 set autowrite                  " Automatically save before commands like :next and :make.
 set ignorecase
 set incsearch
@@ -35,15 +34,15 @@ if has("autocmd")
 
   au FileType smarty,html,css map <buffer> <F3> :!tidy "%"<cr>
   au FileType jenkinsfile,groovy,ruby,haml,sass,html,css,coffee,dockerfile,javascript,json,java,sh,bash,sql set expandtab
-  au FileType json noremap <leader>j :%!python -m json.tool<cr>:%s/    /	/g<cr>
+  au FileType json noremap <leader>j :%!python -m json.tool<cr>:%s/    /  /g<cr>
   au FileType ruby,erb noremap <leader>r :!ruby -c %<cr>
 
-	autocmd FileType ruby let &l:tags = pathogen#legacyjoin(pathogen#uniq(
-	      \ pathogen#split(&tags) +
-	      \ map(split($GEM_PATH,':'),'v:val."/gems/*/tags"')))
+  autocmd FileType ruby let &l:tags = pathogen#legacyjoin(pathogen#uniq(
+        \ pathogen#split(&tags) +
+        \ map(split($GEM_PATH,':'),'v:val."/gems/*/tags"')))
 
-	autocmd FileType go nmap <leader>b  <Plug>(go-build)
-	autocmd FileType go nmap <leader>t  <Plug>(go-test)
+  autocmd FileType go nmap <leader>b  <Plug>(go-build)
+  autocmd FileType go nmap <leader>t  <Plug>(go-test)
 endif
 
 if $VIM_CRONTAB == 'true'
@@ -78,3 +77,11 @@ let g:ctrlp_map = '<c-i>'
 " g:solarized_old_cursor_style: set to 1 if you want to use the original Solarized's cursor style (default: 0). By default, the cursor is orange/red in light themes, and blue in dark themes (but please note that your terminal may override the cursor's color).
 " g:solarized_extra_hi_groups: set to 1 to enable Solarized filetype-specific syntax highlighting groups (default is 0). Please be aware that there is a long standing issue with extra highlight groups.
 " g:solarized_use16: see above.
+
+
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+colorscheme solarized8
