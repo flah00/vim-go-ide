@@ -13,13 +13,14 @@ set visualbell t_vb=           " turn off error beep/flash
 set whichwrap=b,s,h,l,<,>,[,]  " move freely between files
 set clipboard=unnamed
 set diffopt+=iwhite
+set tabstop=2
+set shiftwidth=2
 
 noremap <Leader>a :Ack --ignore-dir log --ignore-dir tmp 
 noremap <Leader>g :!align.pl -ss<CR>dd
 noremap <Leader>l :TagbarToggle<CR>
 noremap <Leader>; :NERDTreeToggle<CR>
 noremap <Leader>t :!aws --profile prod-east cloudformation validate-template --template-body "$(cat %)"<CR>
-inoremap <C-m> <C-x><C-o>
 noremap <C-p> :tabnext<cr>
 noremap <C-o> :tabprev<cr>
 noremap <C-n> :tabnew<cr>
@@ -63,7 +64,7 @@ set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
 let g:html_number_lines = 0
 
 let g:ctrlp_map = '<c-i>'
-"let g:go_fmt_command = "goimports"
+let g:go_fmt_command = "goimports"
 
 " solarized8
 " The following options are inherited from Solarized:

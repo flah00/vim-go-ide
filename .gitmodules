@@ -7,3 +7,6 @@
 [submodule "bundle/forked/vim-mustache-handlebars"]
 	path = bundle/forked/vim-mustache-handlebars
 	url = git://github.com/mustache/vim-mustache-handlebars.git
+[submodule "bundle/pristine/neosnippet-snippets"]
+	path = bundle/pristine/neosnippet-snippets
+	url = https://github.com/Shougo/neosnippet-snippets
