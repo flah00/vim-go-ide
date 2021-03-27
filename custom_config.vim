@@ -17,6 +17,7 @@ set tabstop=2
 set shiftwidth=2
 
 noremap <Leader>a :Ack --ignore-dir log --ignore-dir tmp 
+noremap <Leader>d :GoDoc<CR>
 noremap <Leader>g :!align.pl -ss<CR>dd
 noremap <Leader>l :TagbarToggle<CR>
 noremap <Leader>; :NERDTreeToggle<CR>
