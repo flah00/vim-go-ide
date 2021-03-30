@@ -65,6 +65,7 @@ set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
 let g:html_number_lines = 0
 
 let g:ctrlp_map = '<c-i>'
+let g:ctrlp_follow_symlinks = 1
 let g:go_fmt_command = "goimports"
 
 " solarized8
