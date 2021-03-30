@@ -17,6 +17,7 @@ set tabstop=2
 set shiftwidth=2
 
 noremap <Leader>a :Ack --ignore-dir log --ignore-dir tmp 
+noremap <Leader>d :GoDoc<CR>
 noremap <Leader>g :!align.pl -ss<CR>dd
 noremap <Leader>l :TagbarToggle<CR>
 noremap <Leader>; :NERDTreeToggle<CR>
@@ -64,6 +65,7 @@ set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
 let g:html_number_lines = 0
 
 let g:ctrlp_map = '<c-i>'
+let g:ctrlp_follow_symlinks = 1
 let g:go_fmt_command = "goimports"
 
 " solarized8

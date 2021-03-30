@@ -10,3 +10,6 @@
 [submodule "bundle/pristine/neosnippet-snippets"]
 	path = bundle/pristine/neosnippet-snippets
 	url = https://github.com/Shougo/neosnippet-snippets
+[submodule "bundle/pristine/ctrlp.vim"]
+	path = bundle/pristine/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim
